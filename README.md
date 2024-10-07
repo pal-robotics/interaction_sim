@@ -1,6 +1,6 @@
 Social Interaction Simulator
 ============================
 
-![Social Interaction Simulator](docs/social-interaction-simulator.jpg
+![Social Interaction Simulator](docs/social-interaction-simulator.jpg)
 
 
