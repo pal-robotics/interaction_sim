@@ -1,0 +1,4 @@
+/hri_face_detect:
+  remappings:
+    image: /camera1/image_raw
+    camera_info: /camera1/camera_info

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>interaction_sim</name>
+  <version>0.1.0</version>
+  <description>Bring-up package for PAL Robotics' Social Interactions simulator</description>
+  <maintainer email="severin.lemaignan@pal-robotics.com">Séverin Lemaignan</maintainer>
+  <license>Apache-2.0</license>
+
+  <exec_depend>launch_pal</exec_depend>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <exec_depend>rqt</exec_depend>
+  <exec_depend>rqt_chat</exec_depend>
+  <exec_depend>rqt_image_view</exec_depend>
+
+  <exec_depend>communication_hub</exec_depend>
+  <exec_depend>hri_face_detect</exec_depend>
+  <exec_depend>usb_cam</exec_depend>
+  <exec_depend>volume_control_pulseaudio</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
