@@ -2,8 +2,8 @@
 Changelog for package interaction_sim
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.2.1 (2024-10-08)
+------------------
 * volume_control_pulseaudio is not actually needed (this is a dep of RASA chatbots)
 * Contributors: Séverin Lemaignan
 
