@@ -2,8 +2,8 @@
 Changelog for package interaction_sim
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.2.0 (2024-10-08)
+------------------
 * add missing dependencies
 * minor: typo in README
 * [doc] basic readme
