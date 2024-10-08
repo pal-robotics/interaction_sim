@@ -2,8 +2,8 @@
 Changelog for package interaction_sim
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.3.0 (2024-10-08)
+------------------
 * also launch rqt with pre-set window configuration
 * Contributors: Séverin Lemaignan
 
