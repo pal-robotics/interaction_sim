@@ -2,3 +2,9 @@
   remappings:
     image: /camera1/image_raw
     camera_info: /camera1/camera_info
+
+/robot_face/expressive_eyes:
+  ros__parameters:
+    general:
+      headless: true
+

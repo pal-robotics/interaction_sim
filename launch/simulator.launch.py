@@ -3,14 +3,8 @@ import os
 from ament_index_python.packages import get_package_share_directory
 
 from launch import LaunchDescription
-from launch_ros.actions import LifecycleNode
-from launch.actions import IncludeLaunchDescription, EmitEvent, RegisterEventHandler
+from launch.actions import IncludeLaunchDescription, ExecuteProcess, Shutdown
 from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch_ros.event_handlers import OnStateTransition
-from launch_ros.events.lifecycle import ChangeState
-from lifecycle_msgs.msg import Transition
-from launch.events import matches_action
-
 
 def generate_launch_description():
 
@@ -41,5 +35,21 @@ def generate_launch_description():
         PythonLaunchDescriptionSource([os.path.join(
             get_package_share_directory('usb_cam'), 'launch'), '/camera.launch.py'])
     ))
+
+    rqt_cmd = ['rqt',             
+            '--perspective-file', 
+            os.path.join(
+                get_package_share_directory('interaction_sim'),
+                'config/simulator.perspective')]
+
+    # Create the ExecuteProcess action
+    rqt = ExecuteProcess(
+        cmd=rqt_cmd,
+        output='log',
+        shell=False,
+        on_exit=Shutdown()
+    )
+
+    ld.add_action(rqt)
 
     return ld
