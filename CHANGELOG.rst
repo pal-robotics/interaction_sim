@@ -2,6 +2,13 @@
 Changelog for package interaction_sim
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* add missing upstream dep on pydantic
+* start the knowledge base
+* auto activate communication_hub
+* Contributors: Séverin Lemaignan
+
 0.3.0 (2024-10-08)
 ------------------
 * also launch rqt with pre-set window configuration
