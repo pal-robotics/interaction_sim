@@ -17,8 +17,7 @@ def generate_launch_description():
 
     ld.add_action(IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(
-            get_package_share_directory('communication_hub'), 'launch'), '/communication_hub.launch.py']),
-        launch_arguments={'transition_to_activate': 'True'}.items()
+            get_package_share_directory('communication_hub'), 'launch'), '/communication_hub_with_args.launch.py'])
     ))
 
     ld.add_action(IncludeLaunchDescription(
