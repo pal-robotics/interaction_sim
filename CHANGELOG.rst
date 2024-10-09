@@ -2,8 +2,8 @@
 Changelog for package interaction_sim
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.3.1 (2024-10-09)
+------------------
 * add missing upstream dep on pydantic
 * start the knowledge base
 * auto activate communication_hub
