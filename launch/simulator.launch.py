@@ -35,6 +35,11 @@ def generate_launch_description():
             get_package_share_directory('usb_cam'), 'launch'), '/camera.launch.py'])
     ))
 
+    ld.add_action(IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([os.path.join(
+            get_package_share_directory('knowledge_core'), 'launch'), '/knowledge_core.launch.py'])
+    ))
+
     rqt_cmd = ['rqt',             
             '--perspective-file', 
             os.path.join(
