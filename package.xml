@@ -14,9 +14,10 @@
   <exec_depend>rqt_chat</exec_depend>
   <exec_depend>rqt_image_view</exec_depend>
   <exec_depend>python3-pydantic</exec_depend>
-  <!-- <exec_depend>rqt_human_radar</exec_depend> -->
+  <exec_depend>rqt_human_radar</exec_depend>
   <!-- <exec_depend>hri_visualization</exec_depend> -->
 
+  <exec_depend>attention_manager</exec_depend>
   <exec_depend>expressive_eyes</exec_depend>
   <exec_depend>communication_hub</exec_depend>
   <exec_depend>hri_face_detect</exec_depend>

@@ -7,4 +7,6 @@
   ros__parameters:
     general:
       headless: true
+  remappings:
+    /robot_face/look_at: /look_at
 

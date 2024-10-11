@@ -4,6 +4,7 @@ from ament_index_python.packages import get_package_share_directory
 
 from launch import LaunchDescription
 from launch.actions import IncludeLaunchDescription, ExecuteProcess, Shutdown
+from launch_ros.actions import Node
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 
 def generate_launch_description():
@@ -13,6 +14,11 @@ def generate_launch_description():
     ld.add_action(IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(
             get_package_share_directory('expressive_eyes'), 'launch'), '/expressive_eyes_with_eyes_tf.launch.py'])
+    ))
+
+    ld.add_action(IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([os.path.join(
+            get_package_share_directory('attention_manager'), 'launch'), '/attention_manager.launch.py'])
     ))
 
     ld.add_action(IncludeLaunchDescription(
@@ -27,12 +33,32 @@ def generate_launch_description():
 
     ld.add_action(IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(
+            get_package_share_directory('hri_person_manager'), 'launch'), '/person_manager.launch.py']),
+        launch_arguments={"reference_frame": "camera", "robot_reference_frame": "sellion_link"}.items(),
+    ))
+
+    ld.add_action(IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([os.path.join(
             get_package_share_directory('hri_face_detect'), 'launch'), '/face_detect.launch.py'])
     ))
 
     ld.add_action(IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(
             get_package_share_directory('usb_cam'), 'launch'), '/camera.launch.py'])
+    ))
+
+    ld.add_action(Node(
+        package='tf2_ros',
+        executable='static_transform_publisher',
+        arguments=['0', '0', '0.1', '-0.5', '0.5',
+                   '-0.5', '0.5', 'sellion_link', 'camera'],
+    ))
+
+    ld.add_action(Node(
+        package='tf2_ros',
+        executable='static_transform_publisher',
+        arguments=['0', '0', '0.20', '0', '0',
+                   '0', '1', 'base_link', 'sellion_link'],
     ))
 
     ld.add_action(IncludeLaunchDescription(
