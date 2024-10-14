@@ -2,6 +2,11 @@
 Changelog for package interaction_sim
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* add attention_manager and rqt_human_radar
+* Contributors: Séverin Lemaignan
+
 0.3.1 (2024-10-09)
 ------------------
 * add missing upstream dep on pydantic
