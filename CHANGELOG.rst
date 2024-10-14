@@ -2,8 +2,8 @@
 Changelog for package interaction_sim
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.4.0 (2024-10-14)
+------------------
 * add attention_manager and rqt_human_radar
 * Contributors: Séverin Lemaignan
 
