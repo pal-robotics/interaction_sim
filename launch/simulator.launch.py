@@ -4,16 +4,20 @@ from ament_index_python.packages import get_package_share_directory
 
 from launch import LaunchDescription
 from launch.actions import IncludeLaunchDescription, ExecuteProcess, Shutdown
-from launch_ros.actions import Node
+from launch_ros.actions import Node, SetRemap
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 
 def generate_launch_description():
 
     ld = LaunchDescription()
 
+    ld.add_action(SetRemap(src='image', dst='/camera1/image_raw'))
+    ld.add_action(SetRemap(src='/robot_face/look_at', dst='/look_at'))
+
     ld.add_action(IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(
-            get_package_share_directory('expressive_eyes'), 'launch'), '/expressive_eyes_with_eyes_tf.launch.py'])
+            get_package_share_directory('expressive_eyes'), 'launch'), '/expressive_eyes_with_eyes_tf.launch.py']),
+        launch_arguments={"general.headless": "True"}.items(),
     ))
 
     ld.add_action(IncludeLaunchDescription(
@@ -45,6 +49,11 @@ def generate_launch_description():
     ld.add_action(IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(
             get_package_share_directory('usb_cam'), 'launch'), '/camera.launch.py'])
+    ))
+
+    ld.add_action(IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([os.path.join(
+            get_package_share_directory('hri_visualization'), 'launch'), '/hri_visualization.launch.py'])
     ))
 
     ld.add_action(Node(
