@@ -2,6 +2,12 @@
 Changelog for package interaction_sim
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* update rqt perspective with correct topic for hri_visualization
+* disable expressive_eyes foreground filter to improve compression
+* Contributors: Séverin Lemaignan
+
 0.5.0 (2024-10-16)
 ------------------
 * start emotion_recognizer
