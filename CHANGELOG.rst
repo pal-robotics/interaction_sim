@@ -2,8 +2,8 @@
 Changelog for package interaction_sim
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.5.1 (2024-10-16)
+------------------
 * update rqt perspective with correct topic for hri_visualization
 * disable expressive_eyes foreground filter to improve compression
 * Contributors: Séverin Lemaignan
