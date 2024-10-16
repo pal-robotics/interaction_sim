@@ -2,8 +2,8 @@
 Changelog for package interaction_sim
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.5.0 (2024-10-16)
+------------------
 * start emotion_recognizer
 * remove volume_control_pulseaudio from launch file
 * add dep on hri_visualization
