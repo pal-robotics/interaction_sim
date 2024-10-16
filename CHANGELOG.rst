@@ -2,6 +2,14 @@
 Changelog for package interaction_sim
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* start emotion_recognizer
+* remove volume_control_pulseaudio from launch file
+* add dep on hri_visualization
+* use launch arguments instead of config file, to avoid impacting people's config
+* Contributors: Séverin Lemaignan
+
 0.4.0 (2024-10-14)
 ------------------
 * add attention_manager and rqt_human_radar
