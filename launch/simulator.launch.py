@@ -32,11 +32,6 @@ def generate_launch_description():
 
     ld.add_action(IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(
-            get_package_share_directory('volume_control_pulseaudio'), 'launch'), '/volume.launch.py'])
-    ))
-
-    ld.add_action(IncludeLaunchDescription(
-        PythonLaunchDescriptionSource([os.path.join(
             get_package_share_directory('hri_person_manager'), 'launch'), '/person_manager.launch.py']),
         launch_arguments={"reference_frame": "camera", "robot_reference_frame": "sellion_link"}.items(),
     ))
