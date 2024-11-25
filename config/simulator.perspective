@@ -360,7 +360,7 @@
                   "type": "repr"
                 },
                 "mouse_pub_topic": {
-                  "repr": "'/camera1/image_raw/hri_overlay_mouse_left'",
+                  "repr": "'/camera/image_raw/hri_overlay_mouse_left'",
                   "type": "repr"
                 },
                 "num_gridlines": {
@@ -384,7 +384,7 @@
                   "type": "repr"
                 },
                 "topic": {
-                  "repr": "'/camera1/image_raw/hri_overlay'",
+                  "repr": "'/camera/image_raw/hri_overlay/compressed'",
                   "type": "repr"
                 },
                 "zoom1": {

@@ -12,6 +12,7 @@ def generate_launch_description():
     ld = LaunchDescription()
 
     ld.add_action(SetRemap(src='image', dst='/camera/image_raw'))
+    ld.add_action(SetRemap(src='camera_info', dst='/camera/camera_info'))
     ld.add_action(SetRemap(src='/robot_face/look_at', dst='/look_at'))
 
     ld.add_action(IncludeLaunchDescription(
@@ -53,7 +54,7 @@ def generate_launch_description():
             'gscam_config': 'v4l2src device=/dev/video0 ! video/x-raw,framerate=30/1 ! videoconvert',
             'use_sensor_data_qos': True,
             'camera_name': 'camera',
-            'camera_info_url': 'package://gscam/examples/uncalibrated_parameters.ini',
+            'camera_info_url': 'package://interaction_sim/config/camera_info.yaml',
             'frame_id': 'camera'
             }]
     ))
