@@ -23,6 +23,7 @@
   <exec_depend>hri_face_detect</exec_depend>
   <exec_depend>hri_body_detect</exec_depend>
   <exec_depend>hri_emotion_recognizer</exec_depend>
+  <exec_depend>hri_emotion_models</exec_depend>
   <exec_depend>hri_person_manager</exec_depend>
   <exec_depend>usb_cam</exec_depend>
   <exec_depend>knowledge_core</exec_depend>
