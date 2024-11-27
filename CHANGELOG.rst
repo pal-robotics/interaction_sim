@@ -2,8 +2,8 @@
 Changelog for package interaction_sim
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.6.0 (2024-11-27)
+------------------
 * additional gscam adaptations
   - added a predefined camera configuration file to config folder
   - gscam to use such configuration file
