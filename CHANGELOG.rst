@@ -2,6 +2,17 @@
 Changelog for package interaction_sim
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* additional gscam adaptations
+  - added a predefined camera configuration file to config folder
+  - gscam to use such configuration file
+  - updated rqt perspective to use by default the /camera ns
+* use gscam instead of usb_Cam
+  usb_cam does not offer the sensor QoS, which seems to cause issues
+* add missing dependency on hri_emotion_models
+* Contributors: Séverin Lemaignan, lorenzoferrini
+
 0.5.1 (2024-10-16)
 ------------------
 * update rqt perspective with correct topic for hri_visualization
