@@ -2,6 +2,15 @@
 Changelog for package interaction_sim
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* launch: force colorized output
+* launch: tell communication_hub that the chatbot is available under /chatbot/...
+* add dependency on image-transport-plugins
+  while here, re-order the dependency by alphabetical order
+* correct camera name in the provided default camera calibration file
+* Contributors: Séverin Lemaignan
+
 0.6.0 (2024-11-27)
 ------------------
 * additional gscam adaptations
