@@ -7,6 +7,9 @@ from launch.actions import IncludeLaunchDescription, ExecuteProcess, Shutdown
 from launch_ros.actions import Node, SetRemap
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 
+# force colorized output for all the nodes
+os.environ["RCUTILS_COLORIZED_OUTPUT"] = "1"
+
 def generate_launch_description():
 
     ld = LaunchDescription()
