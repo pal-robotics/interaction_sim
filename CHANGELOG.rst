@@ -2,8 +2,8 @@
 Changelog for package interaction_sim
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.6.1 (2024-11-29)
+------------------
 * launch: force colorized output
 * launch: tell communication_hub that the chatbot is available under /chatbot/...
 * add dependency on image-transport-plugins
