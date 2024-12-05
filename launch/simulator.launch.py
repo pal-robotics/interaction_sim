@@ -17,6 +17,7 @@ def generate_launch_description():
     ld.add_action(SetRemap(src='image', dst='/camera/image_raw'))
     ld.add_action(SetRemap(src='camera_info', dst='/camera/camera_info'))
     ld.add_action(SetRemap(src='/robot_face/look_at', dst='/look_at'))
+    ld.add_action(SetRemap(src='/robot_face/tts', dst='/communication_hub/robot_speech'))
 
     ld.add_action(IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(
