@@ -2,6 +2,11 @@
 Changelog for package interaction_sim
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* fix lipsync
+* Contributors: Luka Juricic
+
 0.6.1 (2024-11-29)
 ------------------
 * launch: force colorized output
