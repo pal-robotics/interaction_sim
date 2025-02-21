@@ -2,6 +2,11 @@
 Changelog for package interaction_sim
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* update launch file to match communication_hub-1.9.0 changes
+* Contributors: Séverin Lemaignan
+
 0.7.0 (2024-12-05)
 ------------------
 * fix lipsync
