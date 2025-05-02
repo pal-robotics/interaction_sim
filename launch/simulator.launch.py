@@ -1,3 +1,17 @@
+# Copyright (c) 2025 PAL Robotics S.L. All rights reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 import os
 
 from ament_index_python.packages import get_package_share_directory
@@ -10,6 +24,7 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 # force colorized output for all the nodes
 os.environ["RCUTILS_COLORIZED_OUTPUT"] = "1"
 
+
 def generate_launch_description():
 
     ld = LaunchDescription()
@@ -17,12 +32,14 @@ def generate_launch_description():
     ld.add_action(SetRemap(src='image', dst='/camera/image_raw'))
     ld.add_action(SetRemap(src='camera_info', dst='/camera/camera_info'))
     ld.add_action(SetRemap(src='/robot_face/look_at', dst='/look_at'))
-    ld.add_action(SetRemap(src='/robot_face/tts', dst='/communication_hub/robot_speech'))
+    ld.add_action(SetRemap(src='/robot_face/tts',
+                  dst='/communication_hub/robot_speech'))
 
     ld.add_action(IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(
             get_package_share_directory('expressive_eyes'), 'launch'), '/expressive_eyes_with_eyes_tf.launch.py']),
-        launch_arguments={"general.headless": "True", "general.fg_bitmap": ""}.items(),
+        launch_arguments={"general.headless": "True",
+                          "general.fg_bitmap": ""}.items(),
     ))
 
     ld.add_action(IncludeLaunchDescription(
@@ -33,13 +50,14 @@ def generate_launch_description():
     ld.add_action(IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(
             get_package_share_directory('communication_hub'), 'launch'), '/communication_hub.launch.py']),
-        launch_arguments={"activate": "True"}.items(),
+        launch_arguments={"enable_default_chatbot": "True"}.items(),
     ))
 
     ld.add_action(IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(
             get_package_share_directory('hri_person_manager'), 'launch'), '/person_manager.launch.py']),
-        launch_arguments={"reference_frame": "camera", "robot_reference_frame": "sellion_link"}.items(),
+        launch_arguments={"reference_frame": "camera",
+                          "robot_reference_frame": "sellion_link"}.items(),
     ))
 
     ld.add_action(IncludeLaunchDescription(
@@ -61,9 +79,8 @@ def generate_launch_description():
             'camera_name': 'camera',
             'camera_info_url': 'package://interaction_sim/config/camera_info.yaml',
             'frame_id': 'camera'
-            }]
+        }]
     ))
-
 
     ld.add_action(IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(
@@ -89,11 +106,11 @@ def generate_launch_description():
             get_package_share_directory('knowledge_core'), 'launch'), '/knowledge_core.launch.py'])
     ))
 
-    rqt_cmd = ['rqt',             
-            '--perspective-file', 
-            os.path.join(
-                get_package_share_directory('interaction_sim'),
-                'config/simulator.perspective')]
+    rqt_cmd = ['rqt',
+               '--perspective-file',
+               os.path.join(
+                   get_package_share_directory('interaction_sim'),
+                   'config/simulator.perspective')]
 
     # Create the ExecuteProcess action
     rqt = ExecuteProcess(
