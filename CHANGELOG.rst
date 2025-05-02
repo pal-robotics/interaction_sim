@@ -2,6 +2,12 @@
 Changelog for package interaction_sim
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* update to communication_hub 2.0.0
+* [minor] doc images
+* Contributors: Séverin Lemaignan
+
 0.8.0 (2025-02-21)
 ------------------
 * update launch file to match communication_hub-1.9.0 changes
