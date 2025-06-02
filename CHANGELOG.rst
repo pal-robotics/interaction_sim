@@ -2,8 +2,8 @@
 Changelog for package interaction_sim
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.10.0 (2025-06-02)
+-------------------
 * add 'ui' launch parameter to start the UI server
 * Contributors: Séverin Lemaignan
 
