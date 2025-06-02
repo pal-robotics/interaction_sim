@@ -17,9 +17,11 @@ import os
 from ament_index_python.packages import get_package_share_directory
 
 from launch import LaunchDescription
-from launch.actions import IncludeLaunchDescription, ExecuteProcess, Shutdown
+from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, ExecuteProcess, Shutdown
+from launch.conditions import IfCondition
 from launch_ros.actions import Node, SetRemap
 from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch.substitutions import LaunchConfiguration
 
 # force colorized output for all the nodes
 os.environ["RCUTILS_COLORIZED_OUTPUT"] = "1"
@@ -86,6 +88,15 @@ def generate_launch_description():
         PythonLaunchDescriptionSource([os.path.join(
             get_package_share_directory('hri_visualization'), 'launch'), '/hri_visualization.launch.py'])
     ))
+
+    ld.add_action(DeclareLaunchArgument('ui',
+                                        description='Start the UI server, to display custom graphical user interface',
+                                        default_value='False'))
+    with_ui = LaunchConfiguration('ui')
+    ld.add_action(Node(package='ui_server',
+                       executable='ui_server',
+                       condition=IfCondition(with_ui),
+                       ))
 
     ld.add_action(Node(
         package='tf2_ros',

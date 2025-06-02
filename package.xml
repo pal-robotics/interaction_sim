@@ -28,6 +28,7 @@
   <exec_depend>rqt_chat</exec_depend>
   <exec_depend>rqt_human_radar</exec_depend>
   <exec_depend>rqt_image_view</exec_depend>
+  <exec_depend>ui_server</exec_depend>
 
   <export>
     <build_type>ament_cmake</build_type>
