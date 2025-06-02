@@ -2,6 +2,11 @@
 Changelog for package interaction_sim
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* add 'ui' launch parameter to start the UI server
+* Contributors: Séverin Lemaignan
+
 0.9.0 (2025-05-02)
 ------------------
 * update to communication_hub 2.0.0
