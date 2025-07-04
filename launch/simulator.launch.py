@@ -112,6 +112,17 @@ def generate_launch_description():
                    '0', '1', 'base_link', 'sellion_link'],
     ))
 
+    # rosbridge needed for knowledge_core web-based viewer
+    rosbridge_launch = IncludeLaunchDescription(
+        XMLLaunchDescriptionSource([
+            PathJoinSubstitution([
+                FindPackageShare('rosbridge_server'),
+                'launch',
+                'rosbridge_websocket_launch.xml'])
+        ]))
+    ld.add_action(rosbridge_launch)
+
+
     ld.add_action(IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(
             get_package_share_directory('knowledge_core'), 'launch'), '/knowledge_core.launch.py'])
