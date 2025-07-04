@@ -2,6 +2,11 @@
 Changelog for package interaction_sim
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* ensure we start rosbridge_server, required for knowledge_core viewer
+* Contributors: Séverin Lemaignan
+
 0.10.0 (2025-06-02)
 -------------------
 * add 'ui' launch parameter to start the UI server
