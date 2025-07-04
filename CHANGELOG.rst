@@ -2,8 +2,8 @@
 Changelog for package interaction_sim
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.10.2 (2025-07-04)
+-------------------
 * missing imports in launchfile
 * Contributors: Séverin Lemaignan
 
