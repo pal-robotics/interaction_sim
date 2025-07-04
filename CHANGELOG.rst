@@ -2,6 +2,11 @@
 Changelog for package interaction_sim
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* missing imports in launchfile
+* Contributors: Séverin Lemaignan
+
 0.10.1 (2025-07-04)
 -------------------
 * ensure we start rosbridge_server, required for knowledge_core viewer
