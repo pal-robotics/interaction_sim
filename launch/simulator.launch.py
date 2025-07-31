@@ -42,6 +42,11 @@ def generate_launch_description():
 
     ld.add_action(IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(
+            get_package_share_directory('i18n_manager'), 'launch'), '/i18n_manager.launch.py'])
+    ))
+
+    ld.add_action(IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([os.path.join(
             get_package_share_directory('expressive_eyes'), 'launch'), '/expressive_eyes_with_eyes_tf.launch.py']),
         launch_arguments={"general.headless": "True",
                           "general.fg_bitmap": ""}.items(),

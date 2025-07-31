@@ -10,6 +10,7 @@
   <exec_depend>launch_pal</exec_depend>
   <buildtool_depend>ament_cmake</buildtool_depend>
 
+  <exec_depend>i18n_manager</exec_depend>
   <exec_depend>attention_manager</exec_depend>
   <exec_depend>communication_hub</exec_depend>
   <exec_depend>expressive_eyes</exec_depend>
