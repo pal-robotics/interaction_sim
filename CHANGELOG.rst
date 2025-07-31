@@ -2,6 +2,11 @@
 Changelog for package interaction_sim
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* start the i18n_manager
+* Contributors: Séverin Lemaignan
+
 0.10.2 (2025-07-04)
 -------------------
 * missing imports in launchfile
