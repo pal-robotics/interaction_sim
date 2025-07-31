@@ -2,8 +2,8 @@
 Changelog for package interaction_sim
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.11.0 (2025-07-31)
+-------------------
 * start the i18n_manager
 * Contributors: Séverin Lemaignan
 
