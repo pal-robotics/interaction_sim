@@ -60,7 +60,7 @@ def generate_launch_description():
     ld.add_action(IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(
             get_package_share_directory('communication_hub'), 'launch'), '/communication_hub.launch.py']),
-        launch_arguments={"enable_default_chatbot": "True"}.items(),
+        launch_arguments={"enable_default_chat": "True"}.items(),
     ))
 
     ld.add_action(IncludeLaunchDescription(
