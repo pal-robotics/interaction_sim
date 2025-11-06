@@ -2,6 +2,11 @@
 Changelog for package interaction_sim
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* updated the enable_default_chatbot to enable_default_chat parameter for communication hub
+* Contributors: ferrangebelli
+
 0.11.0 (2025-07-31)
 -------------------
 * start the i18n_manager
